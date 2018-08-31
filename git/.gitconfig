@@ -1,0 +1,39 @@
+[user]
+[color]
+  ui = true
+[merge]
+  summary = true
+  verbosity = 1
+  tool = mvimdiff
+  conflictstyle = diff3
+[mergetool]
+  prompt = false
+[mergetool "mvimdiff"]
+  cmd="mvim -c 'Gdiff' $MERGED"
+  keepbackup=false
+[push]
+  default = simple
+[diff]
+  algorithm = patience
+  renames = copies
+  compactionHeuristic = true
+[core]
+  filemode = false
+  autocrlf = input
+  excludesfile = ~/.gitignore_global
+  trustctime = false
+  pager = diff-so-fancy | less --tabs=1,5 -R
+  untrackedCache = true
+[rerere]
+  enabled = true
+[pager]
+  diff = diff-so-fancy | less --tabs=1,5 -R
+  show = diff-so-fancy | less --tabs=1,5 -R
+  log = diff-so-fancy | less --tabs=1,5 -R
+[rebase]
+  autosquash = true
+[init]
+[commit]
+  gpgsign = false
+[gpg]
+  program = gpg2
