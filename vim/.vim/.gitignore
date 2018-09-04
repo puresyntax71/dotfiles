@@ -1,7 +1,0 @@
-.*.s[a-w][a-z]
-*.un~
-session.vim
-.netrwhist
-*~
-.vim/plugged
-.vim/tmp

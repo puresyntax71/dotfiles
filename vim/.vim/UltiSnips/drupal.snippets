@@ -1,4 +1,5 @@
 snippet <?php "Starting lines for creating modules"
+
 <?php
 /**
  * @file
@@ -6,31 +7,4 @@ snippet <?php "Starting lines for creating modules"
  */
 
 ${1}
-endsnippet
-
-snippet t "Drupal t()" !
-t(${1})
-endsnippet
-
-snippet efq "efq"
-$query = new EntityFieldQuery();
-$query
-  ->entityCondition(${1})
-  ${2}
-$result = $query->execute();
-if (!empty($result[${3}])) {
-  ${4}
-}
-endsnippet
-
-snippet efq_node "efq_node"
-$query = new EntityFieldQuery();
-$query
-  ->entityCondition('entity_type', 'node')
-  ->entityCondition('bundle', ${2})
-  ${3}
-$result = $query->execute();
-if (!empty($result[${4}])) {
-  ${5}
-}
 endsnippet
