@@ -45,6 +45,7 @@ call plug#end()
 filetype plugin indent on
 syntax on
 
+set rtp+=/usr/local/opt/fzf
 set autoindent
 set background=dark
 set backspace=indent,eol,start
