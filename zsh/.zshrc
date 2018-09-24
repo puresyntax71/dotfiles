@@ -36,18 +36,6 @@ zplug "modules/gpg", from:prezto
 
 zstyle ":prezto:module:completion" loaded 'yes'
 
-# }}}
-
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
-
-# zplug load --verbose
-zplug load
-
 # Prezto settings. {{{
 
 export BROWSER='google-chrome'
@@ -81,9 +69,21 @@ mkdir -p "$TMPPREFIX"
 
 # }}}
 
+# }}}
+
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+# zplug load --verbose
+zplug load
+
 # source <(gopass completion zsh)
 # export PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages:$PYTHONPATH
-export NVM_DIR="$HOME/.nvm"
+# export NVM_DIR="$HOME/.nvm"
 # source "/usr/local/opt/nvm/nvm.sh"
 
 z() {

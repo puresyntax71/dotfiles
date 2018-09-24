@@ -1,83 +1,31 @@
-# PHP snippets overrides
-snippet array "array" !
-${1} = array(
-  ${2}
-);${4}
-endsnippet
-
-snippet php "php"
-<?php
-${1}
-endsnippet
-
-snippet wh "wh" !
-while (${1}) {
-  ${2}
-}
-endsnippet
-
 snippet if "if" !
-if (${1}) {
-  ${2}
+if (${1})
+{
+    ${2}
 }
 endsnippet
 
 snippet else "else" !
-else {
-  ${1}
+else
+{
+    ${1}
 }
 endsnippet
 
 snippet elseif "elseif" !
-elseif (${1}) {
-  ${2}
+elseif (${1})
+{
+    ${2}
 }
-endsnippet
-
-snippet switch "switch" !
-switch ($${1}) {
-  ${2}
-}
-endsnippet
-
-snippet case "case" !
-case ${1:value}:
-  ${2}
-  break;${3}
-endsnippet
-
-snippet for "for" !
-for ($${2:i} = 0; $$2 < ${1}; $$2${3:++}) {
-  ${4}
-}
-endsnippet
-
-snippet foreach "foreach" !
-foreach (${1} as ${2}) {
-  ${3}
-}
-endsnippet
-
-snippet function "function" !
-/**
- * ${1:@todo}
- */
-function ${2}(${3}) {
-  ${4}
-}
-endsnippet
-
-snippet block_comment "block comment"
-// ----------------------------------------------------------------------------
-// ${1}
 endsnippet
 
 snippet class "class" !
 /**
  * ${1:@todo}
  */
-class ${2} {
-  ${3}
+class ${2}
+{
+    ${3}
 }
 endsnippet
 
@@ -85,8 +33,9 @@ snippet __construct "__construct"
 /**
  * ${1:{@inheritdoc}}
  */
-public function __construct(${2}) {
-  ${3}
+public function __construct(${2})
+{
+    ${3}
 }
 endsnippet
 
@@ -94,8 +43,9 @@ snippet public "method"
 /**
  * ${1:{@inheritdoc}}
  */
-public function ${2}(${3}) {
-  ${4}
+public function ${2}(${3})
+{
+    ${4}
 }
 endsnippet
 
@@ -103,8 +53,9 @@ snippet protected "protected method"
 /**
  * ${1:{@inheritdoc}}
  */
-protected function ${2}(${3}) {
-  ${4}
+protected function ${2}(${3})
+{
+    ${4}
 }
 endsnippet
 
@@ -112,8 +63,9 @@ snippet private "private method"
 /**
  * ${1:{@inheritdoc}}
  */
-private function ${2}(${3}) {
-  ${4}
+private function ${2}(${3})
+{
+    ${4}
 }
 endsnippet
 
@@ -121,8 +73,9 @@ snippet interface "interface" !
 /**
  * ${1:@todo}
  */
-interface ${2} {
-  ${3}
+interface ${2}
+{
+    ${3}
 }
 endsnippet
 
@@ -130,25 +83,8 @@ snippet abstract "abstract"
 /**
  * ${1:@todo}
  */
-abstract class ${2} {
-  ${3}
-}
-endsnippet
-
-snippet class_interface "class implementing interface"
-/**
- * ${1:@todo}
- */
-class ${2} implements ${3} {
-  ${4}
-}
-endsnippet
-
-snippet class_abstract "class extending abstract"
-/**
- * ${1:@todo}
- */
-class ${2} extends ${3} {
-  ${4}
+abstract class ${2}
+{
+    ${3}
 }
 endsnippet

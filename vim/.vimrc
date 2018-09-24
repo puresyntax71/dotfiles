@@ -74,12 +74,12 @@ set mousehide
 set number
 set path=.,**
 set scrolloff=5
-set shiftwidth=2
+set shiftwidth=4
 set showcmd
 set smartcase
-set softtabstop=2
+set softtabstop=4
 set switchbuf=useopen
-set tabstop=2
+set tabstop=4
 set textwidth=80
 set timeoutlen=700
 set ttimeout
