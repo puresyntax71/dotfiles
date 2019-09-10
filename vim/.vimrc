@@ -5,7 +5,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'SirVer/ultisnips'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'itchyny/lightline.vim'
-Plug 'jelera/vim-javascript-syntax'
+" Plug 'jelera/vim-javascript-syntax'
+Plug 'pangloss/vim-javascript'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-dirvish'
@@ -16,7 +17,9 @@ Plug 'matchit.zip', {'name': 'matchit'}
 Plug 'mattn/emmet-vim', { 'for': ['html', 'jinja'] }
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'plasticboy/vim-markdown'
+Plug 'posva/vim-vue'
 Plug 'shawncplus/phpcomplete.vim'
+Plug 'StanAngeloff/php.vim'
 Plug 'tommcdo/vim-lion'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
@@ -35,6 +38,9 @@ Plug 'tomasr/molokai'
 Plug 'vim-scripts/BusyBee'
 Plug 'twerth/ir_black'
 Plug 'nanotech/jellybeans.vim'
+Plug 'erichdongubler/vim-sublime-monokai'
+Plug 'trusktr/seti.vim'
+Plug 'arcticicestudio/nord-vim'
 
 call plug#end()
 
@@ -92,6 +98,7 @@ set wildignore+=*.swp,*.swo
 set wildignore+=.git
 set wildmode=list:longest,full
 set wrap
+set termguicolors
 
 colorscheme badwolf
 
@@ -192,6 +199,8 @@ function! LightLineFilename()
 endfunction
 
 let $FZF_DEFAULT_COMMAND = 'fd --type f -I'
+
+let g:php_var_selector_is_identifier = 1
 
 " }}}
 

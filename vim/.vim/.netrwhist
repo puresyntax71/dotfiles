@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='scp://arnold@ustcbcs.xenyo.net:22155/ustcbcs.xenyo.net/ustcbcs/public_html/cbcs/'
+let g:netrw_dirhist_2='scp://arnold@ustcbcs.xenyo.net:22155/ustcbcs.xenyo.net/ustcbcs/public_html/cbcs/modules/'
+let g:netrw_dirhist_3='scp://arnold@ustcbcs.xenyo.net:22155/ustcbcs.xenyo.net/ustcbcs/public_html/cbcs/modules/custom/'
+let g:netrw_dirhist_4='scp://arnold@ustcbcs.xenyo.net:22155/ustcbcs.xenyo.net/ustcbcs/public_html/cbcs/modules/custom/hkust_cbcs_components/'

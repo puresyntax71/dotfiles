@@ -18,7 +18,7 @@
   renames = copies
   compactionHeuristic = true
 [core]
-  filemode = false
+	fileMode = false
   autocrlf = input
   excludesfile = ~/.gitignore_global
   trustctime = false
