@@ -29,6 +29,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-unimpaired'
 Plug 'w0rp/ale'
 Plug 'wellle/targets.vim'
+Plug 'cespare/vim-toml'
 
 Plug 'croaker/mustang-vim'
 Plug 'joshdick/onedark.vim'
@@ -41,6 +42,8 @@ Plug 'nanotech/jellybeans.vim'
 Plug 'erichdongubler/vim-sublime-monokai'
 Plug 'trusktr/seti.vim'
 Plug 'arcticicestudio/nord-vim'
+Plug 'ayu-theme/ayu-vim'
+Plug 'ajh17/Spacegray.vim'
 
 call plug#end()
 
@@ -100,7 +103,8 @@ set wildmode=list:longest,full
 set wrap
 set termguicolors
 
-colorscheme badwolf
+let ayucolor="dark"
+colorscheme ayu
 
 " }}}
 

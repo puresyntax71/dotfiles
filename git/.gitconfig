@@ -14,9 +14,9 @@
 [push]
   default = simple
 [diff]
-  algorithm = patience
+  ; algorithm = patience
   renames = copies
-  compactionHeuristic = true
+  ; compactionHeuristic = true
 [core]
 	fileMode = false
   autocrlf = input

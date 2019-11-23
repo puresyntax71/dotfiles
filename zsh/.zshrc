@@ -8,6 +8,7 @@ zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
 zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'id_rsa_dsdeiz'
 
 export ZPLUG_HOME=/usr/local/opt/zplug
+export NVM_DIR="$HOME/.nvm"
 source $ZPLUG_HOME/init.zsh
 # source ~/.zplug/init.zsh
 
@@ -111,3 +112,4 @@ function blt() {
 
 
 export BW_SESSION="+X9MPwakUz2WiqhLhAimw8VmFfPYt2gNbMCEJ0TraLFWVymbdhs2gUuvjlSv4cBK4n7UeTRACJNlCDqDdH1/8g=="
+export PATH="$PATH:/Users/arnoldfrench1/bin/flutter/bin"
