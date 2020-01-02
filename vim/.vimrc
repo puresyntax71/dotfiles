@@ -11,7 +11,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-dirvish'
 Plug 'leafgarland/typescript-vim'
-Plug 'lepture/vim-jinja'
+Plug 'lepture/vim-jinja', { 'on': [] }
 Plug 'machakann/vim-sandwich'
 Plug 'matchit.zip', {'name': 'matchit'}
 Plug 'mattn/emmet-vim', { 'for': ['html', 'jinja'] }
@@ -30,6 +30,8 @@ Plug 'tpope/vim-unimpaired'
 Plug 'w0rp/ale'
 Plug 'wellle/targets.vim'
 Plug 'cespare/vim-toml'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'fatih/vim-go'
 
 Plug 'croaker/mustang-vim'
 Plug 'joshdick/onedark.vim'
@@ -205,6 +207,8 @@ endfunction
 let $FZF_DEFAULT_COMMAND = 'fd --type f -I'
 
 let g:php_var_selector_is_identifier = 1
+
+let g:vue_pre_processors = 'detect_on_enter'
 
 " }}}
 
