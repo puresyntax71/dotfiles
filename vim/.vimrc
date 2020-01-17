@@ -151,7 +151,7 @@ endfor
 
 " Plugins {{{
 
-let g:ale_linters = {'php': ['php']}
+let g:ale_linters = {'php': ['php', 'phpcs']}
 
 let g:lightline = {
     \ 'active': {

@@ -15,6 +15,7 @@ augroup filetypedetect
   autocmd! BufRead,BufNewFile *.module setfiletype php.drupal
   autocmd! BufRead,BufNewFile *.profile setfiletype php.drupal
   autocmd! BufRead,BufNewFile *.theme setfiletype php.drupal
+  autocmd! BufRead,BufNewFile *.php setfiletype php.drupal
 
   autocmd! BufRead,BufNewFile *.twig setfiletype jinja
 
