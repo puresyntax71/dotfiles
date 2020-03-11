@@ -8,6 +8,7 @@ Plug 'itchyny/lightline.vim'
 " Plug 'jelera/vim-javascript-syntax'
 Plug 'pangloss/vim-javascript'
 Plug 'jiangmiao/auto-pairs'
+Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-dirvish'
 Plug 'leafgarland/typescript-vim'
@@ -32,6 +33,9 @@ Plug 'wellle/targets.vim'
 Plug 'cespare/vim-toml'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'fatih/vim-go'
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
 
 Plug 'croaker/mustang-vim'
 Plug 'joshdick/onedark.vim'
@@ -56,7 +60,7 @@ call plug#end()
 filetype plugin indent on
 syntax on
 
-set rtp+=/usr/local/opt/fzf
+set rtp+=~/.fzf/bin/fzf
 set autoindent
 set background=dark
 set backspace=indent,eol,start
@@ -209,6 +213,11 @@ let $FZF_DEFAULT_COMMAND = 'fd --type f -I'
 let g:php_var_selector_is_identifier = 1
 
 let g:vue_pre_processors = 'detect_on_enter'
+
+let g:lsp_log_verbose = 1
+let g:lsp_log_file = expand('~/vim-lsp.log')
+
+" let g:phpactorActivateOverlapingMappings = v:true
 
 " }}}
 

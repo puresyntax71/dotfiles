@@ -3,13 +3,12 @@ export LC_ALL="en_US.UTF-8"
 zstyle ':prezto:module:editor' dot-expansion 'yes'
 zstyle ':prezto:*:*' color 'yes'
 zstyle ':prezto:module:git:status:ignore' submodules 'all'
-zstyle ':prezto:module:prompt' theme 'pure'
+# zstyle ':prezto:module:prompt' theme 'pure'
 zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
-zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'id_rsa_dsdeiz'
+zstyle ':prezto:module:ssh:load' identities 'id_rsa'
 
-export ZPLUG_HOME=/usr/local/opt/zplug
 export NVM_DIR="$HOME/.nvm"
-source $ZPLUG_HOME/init.zsh
+source ~/.zplug/init.zsh
 # source ~/.zplug/init.zsh
 
 # Prezto modules. {{{
@@ -34,6 +33,7 @@ zplug "modules/fasd", from:prezto, defer:2
 zplug "modules/ssh", from:prezto
 zplug "modules/node", from:prezto
 zplug "modules/gpg", from:prezto
+zplug romkatv/powerlevel10k, as:theme, depth:1
 
 zstyle ":prezto:module:completion" loaded 'yes'
 
@@ -57,7 +57,7 @@ path=(
   /usr/local/opt/gnu-tar/libexec/gnubin
   $HOME/Library/Haskell/bin
   /usr/local/mysql/bin
-  $HOME/.composer/vendor/bin
+  $HOME/.config/composer/vendor/bin
   /usr/local/{bin,sbin}
   $HOME/.cargo/bin
   $path
@@ -112,4 +112,6 @@ function blt() {
 
 
 export BW_SESSION="+X9MPwakUz2WiqhLhAimw8VmFfPYt2gNbMCEJ0TraLFWVymbdhs2gUuvjlSv4cBK4n7UeTRACJNlCDqDdH1/8g=="
-export PATH="$PATH:/Users/arnoldfrench1/bin/flutter/bin"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
