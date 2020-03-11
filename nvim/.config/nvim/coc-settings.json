@@ -1,0 +1,50 @@
+{
+  "languageserver": {
+    "dls": {
+      "command": "~/.yarn/bin/diagnostic-languageserver",
+      "args": ["--stdio"],
+      "filetypes": ["php"],
+      "initializationOptions": {
+        "linters": {
+          "phpcs": {
+            "command": "phpcs",
+            "debounce": 100,
+            "rootPatterns": ["composer.json", "composer.lock", "vendor", ".git"],
+            "args": ["--standard=Drupal,DrupalPractice", "--report=emacs", "-s", "-"],
+            "offsetLine": 0,
+            "offsetColumn": 0,
+            "sourceName": "phpcs",
+            "formatLines": 1,
+            "formatPattern": [
+              "^.*:(\\d+):(\\d+):\\s+(.*)\\s+-\\s+(.*)$",
+              {
+                "line": 1,
+                "column": 2,
+                "message": 4,
+                "security": 3
+              }
+            ],
+            "securities": {
+              "error": "error",
+              "warning": "warning"
+            }
+          }
+        },
+        "filetypes": {
+          "php": "phpcs"
+        }
+      }
+    }
+  },
+  "intelephense.files.associations": [
+    "*.inc",
+    "*.php",
+    "*.module"
+  ],
+  "diagnostic.errorSign": "▬",
+  "diagnostic.warningSign": "▪",
+  "diagnostic.infoSign": "▪",
+  "diagnostic.hintSign": "⋅",
+  "suggest.enablePreview": true,
+  "signature.preferShownAbove": true
+}
