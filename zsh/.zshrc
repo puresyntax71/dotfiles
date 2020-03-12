@@ -57,6 +57,7 @@ path=(
   /usr/local/opt/gnu-tar/libexec/gnubin
   $HOME/Library/Haskell/bin
   /usr/local/mysql/bin
+  $HOME/.composer/vendor/bin
   $HOME/.config/composer/vendor/bin
   /usr/local/{bin,sbin}
   $HOME/.cargo/bin
