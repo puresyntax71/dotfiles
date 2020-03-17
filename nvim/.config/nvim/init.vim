@@ -56,7 +56,7 @@ syntax on
 set autoindent
 set background=dark
 set backspace=indent,eol,start
-set cmdheight=2
+" set cmdheight=2
 set expandtab
 set foldcolumn=0
 set foldenable
