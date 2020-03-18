@@ -112,7 +112,7 @@ function blt() {
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 
-export BW_SESSION="+X9MPwakUz2WiqhLhAimw8VmFfPYt2gNbMCEJ0TraLFWVymbdhs2gUuvjlSv4cBK4n7UeTRACJNlCDqDdH1/8g=="
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+export PATH="$PATH:$(yarn global bin)"

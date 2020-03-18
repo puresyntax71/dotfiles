@@ -159,6 +159,10 @@ let $FZF_DEFAULT_COMMAND = 'fd --type f -I'
 
 let g:vue_pre_processors = 'detect_on_enter'
 
+let g:coc_global_extensions = [
+    \ 'coc-phpls',
+\ ]
+
 " }}}
 
 " vim: foldmethod=marker

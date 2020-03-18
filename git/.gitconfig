@@ -18,9 +18,8 @@
   renames = copies
   ; compactionHeuristic = true
 [core]
-	fileMode = false
+  fileMode = false
   autocrlf = input
-  excludesfile = ~/.gitignore_global
   trustctime = false
   pager = diff-so-fancy | less --tabs=1,5 -R
   untrackedCache = true
