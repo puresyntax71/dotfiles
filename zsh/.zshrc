@@ -40,8 +40,8 @@ zstyle ":prezto:module:completion" loaded 'yes'
 # Prezto settings. {{{
 
 export BROWSER='google-chrome'
-export EDITOR='vim'
-export VISUAL='vim'
+export EDITOR='nvim'
+export VISUAL='nvim'
 export PAGER='less'
 
 typeset -gU cdpath fpath mailpath path
@@ -53,7 +53,6 @@ cdpath=(
 
 path=(
   $HOME/bin
-  # $(brew --prefix homebrew/php/php56)/bin
   /usr/local/opt/gnu-tar/libexec/gnubin
   $HOME/Library/Haskell/bin
   /usr/local/mysql/bin
@@ -94,23 +93,7 @@ z() {
     dir="$(fasd -Rdl "$1" | fzf -1 -0 --no-sort +m)" && cd "${dir}" || return 1
 }
 
-function blt() {
-  if [ "`git rev-parse --show-cdup 2> /dev/null`" != "" ]; then
-    GIT_ROOT=$(git rev-parse --show-cdup)
-  else
-    GIT_ROOT="."
-  fi
-
-  if [ -f "$GIT_ROOT/vendor/bin/blt" ]; then
-    $GIT_ROOT/vendor/bin/blt "$@"
-  else
-    echo "You must run this command from within a BLT-generated project repository."
-    return 1
-  fi
-}
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
