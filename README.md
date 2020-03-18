@@ -14,6 +14,8 @@
 * [`diagnostic-languageserver`](https://github.com/iamcco/diagnostic-languageserver)
 * [`diff-so-fancy`](https://github.com/so-fancy/diff-so-fancy)
 
+## Installation
+
 ```
 $ git clone https://github.com/puresyntax71/dotfiles.git ~/.dotfiles
 $ stow -t $HOME <package>
