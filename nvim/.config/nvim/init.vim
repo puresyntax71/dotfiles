@@ -28,6 +28,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-unimpaired'
+Plug 'vim-vdebug/vdebug'
 Plug 'wellle/targets.vim'
 
 Plug 'croaker/mustang-vim'
@@ -162,6 +163,23 @@ let g:vue_pre_processors = 'detect_on_enter'
 let g:coc_global_extensions = [
     \ 'coc-phpls',
 \ ]
+
+if !exists('g:vdebug_options')
+  let g:vdebug_options = {}
+endif
+
+let g:vdebug_options.path_maps = {
+    \  '/app' : getcwd(),
+\ }
+
+let g:vdebug_options.break_on_open = 0
+let g:vdebug_options.watch_window_style = 'compact'
+
+if !exists('g:vdebug_features')
+  let g:vdebug_features = {}
+endif
+
+let g:vdebug_features.max_children = 128
 
 " }}}
 
