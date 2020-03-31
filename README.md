@@ -17,6 +17,12 @@
 
 Set the default for `nvm` using `nvm alias default <version>` e.g. `nvm alias default 13` and install the packages globally using `npm`.
 
+### Composer packages
+
+* [`drupal/coder`](https://www.drupal.org/project/coder)
+
+Install `drupal/coder` using [this](https://www.drupal.org/docs/8/modules/code-review-module/installing-coder-sniffer).
+
 ## Installation
 
 ```
