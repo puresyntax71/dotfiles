@@ -79,13 +79,7 @@ if ! zplug check --verbose; then
     fi
 fi
 
-# zplug load --verbose
 zplug load
-
-# source <(gopass completion zsh)
-# export PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages:$PYTHONPATH
-# export NVM_DIR="$HOME/.nvm"
-# source "/usr/local/opt/nvm/nvm.sh"
 
 z() {
     [ $# -gt 0 ] && fasd_cd -d "$*" && return
