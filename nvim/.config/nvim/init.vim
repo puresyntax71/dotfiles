@@ -15,8 +15,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-dirvish'
 Plug 'leafgarland/typescript-vim'
 Plug 'lepture/vim-jinja'
+Plug 'lumiliet/vim-twig'
 Plug 'machakann/vim-sandwich'
-Plug 'mattn/emmet-vim', { 'for': ['html', 'jinja'] }
+Plug 'mattn/emmet-vim', { 'for': ['html', 'jinja', 'markdown'] }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'pangloss/vim-javascript'
 Plug 'plasticboy/vim-markdown'
@@ -95,7 +96,7 @@ set wildmode=list:longest,full
 set wrap
 
 let ayucolor="dark"
-colorscheme ayu
+colorscheme badwolf
 
 " }}}
 
@@ -136,6 +137,15 @@ omap if <Plug>(coc-funcobj-i)
 omap af <Plug>(coc-funcobj-a)
 
 nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
+nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
+nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
+nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
+nnoremap <silent> <space>j  :<C-u>CocNext<CR>
+nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
+nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
