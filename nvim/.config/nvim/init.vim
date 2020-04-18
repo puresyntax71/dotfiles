@@ -97,7 +97,7 @@ set wildmode=list:longest,full
 set wrap
 
 let ayucolor="dark"
-colorscheme iceberg
+colorscheme ayu
 
 " }}}
 
@@ -167,7 +167,7 @@ let g:lightline = {
     \ },
 \ }
 
-let g:lightline.colorscheme = 'iceberg'
+let g:lightline.colorscheme = 'ayu'
 
 let $FZF_DEFAULT_COMMAND = 'fd --type f -I'
 
