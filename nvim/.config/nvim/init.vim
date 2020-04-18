@@ -17,7 +17,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'lepture/vim-jinja'
 Plug 'lumiliet/vim-twig'
 Plug 'machakann/vim-sandwich'
-Plug 'mattn/emmet-vim', { 'for': ['html', 'jinja', 'markdown'] }
+Plug 'mattn/emmet-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'pangloss/vim-javascript'
 Plug 'plasticboy/vim-markdown'
@@ -45,6 +45,7 @@ Plug 'trusktr/seti.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'ayu-theme/ayu-vim'
 Plug 'ajh17/Spacegray.vim'
+Plug 'cocopon/iceberg.vim'
 
 call plug#end()
 
@@ -96,7 +97,7 @@ set wildmode=list:longest,full
 set wrap
 
 let ayucolor="dark"
-colorscheme badwolf
+colorscheme iceberg
 
 " }}}
 
@@ -162,9 +163,11 @@ endfunction
 let g:lightline = {
     \ 'active': {
     \   'left': [ [ 'mode', 'paste' ],
-    \             [ 'cocstatus', 'fugitive', 'filename' ] ]
+    \             [ 'cocstatus', 'fugitive', 'modified', 'filename' ] ]
     \ },
 \ }
+
+let g:lightline.colorscheme = 'iceberg'
 
 let $FZF_DEFAULT_COMMAND = 'fd --type f -I'
 
