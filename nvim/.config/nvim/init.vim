@@ -46,6 +46,7 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'ayu-theme/ayu-vim'
 Plug 'ajh17/Spacegray.vim'
 Plug 'cocopon/iceberg.vim'
+Plug 'chuling/vim-equinusocio-material'
 
 call plug#end()
 
@@ -97,6 +98,8 @@ set wildmode=list:longest,full
 set wrap
 
 let ayucolor="dark"
+" let g:equinusocio_material_darker = 1
+" let g:equinusocio_material_hide_vertsplit = 1
 colorscheme ayu
 
 " }}}
@@ -167,7 +170,7 @@ let g:lightline = {
     \ },
 \ }
 
-let g:lightline.colorscheme = 'ayu'
+let g:lightline.colorscheme = 'ayu_mirage'
 
 let $FZF_DEFAULT_COMMAND = 'fd --type f -I'
 
