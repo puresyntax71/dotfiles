@@ -2,25 +2,26 @@
 
 call plug#begin(stdpath('data') . '/plugged')
 
+Plug 'sheerun/vim-polyglot'
 Plug 'SirVer/ultisnips'
 Plug 'StanAngeloff/php.vim'
 Plug 'cakebaker/scss-syntax.vim'
-Plug 'cespare/vim-toml'
+" Plug 'cespare/vim-toml'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'fatih/vim-go'
+" Plug 'fatih/vim-go'
 Plug 'itchyny/lightline.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-dirvish'
-Plug 'leafgarland/typescript-vim'
-Plug 'lepture/vim-jinja'
-Plug 'lumiliet/vim-twig'
+" Plug 'leafgarland/typescript-vim'
+" Plug 'lepture/vim-jinja'
+" Plug 'lumiliet/vim-twig'
 Plug 'machakann/vim-sandwich'
 Plug 'mattn/emmet-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'pangloss/vim-javascript'
-Plug 'plasticboy/vim-markdown'
+" Plug 'pangloss/vim-javascript'
+" Plug 'plasticboy/vim-markdown'
 Plug 'posva/vim-vue'
 Plug 'tommcdo/vim-lion'
 Plug 'tpope/vim-commentary'
@@ -172,7 +173,8 @@ let g:lightline = {
 
 let g:lightline.colorscheme = 'ayu_mirage'
 
-let $FZF_DEFAULT_COMMAND = 'fd --type f -I'
+" let $FZF_DEFAULT_COMMAND = 'fd --type f -I'
+let $FZF_DEFAULT_COMMAND = 'fdfind --type f -I'
 
 let g:vue_pre_processors = 'detect_on_enter'
 
