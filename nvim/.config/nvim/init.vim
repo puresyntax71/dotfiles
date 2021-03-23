@@ -48,6 +48,9 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'ajh17/Spacegray.vim'
 Plug 'cocopon/iceberg.vim'
 Plug 'chuling/vim-equinusocio-material'
+Plug 'humanoid-colors/vim-humanoid-colorscheme'
+Plug 'sainnhe/sonokai'
+Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
 
 call plug#end()
 
@@ -97,11 +100,6 @@ set wildignore+=*.swp,*.swo
 set wildignore+=.git
 set wildmode=list:longest,full
 set wrap
-
-let ayucolor="dark"
-" let g:equinusocio_material_darker = 1
-" let g:equinusocio_material_hide_vertsplit = 1
-colorscheme ayu
 
 " }}}
 
@@ -171,8 +169,6 @@ let g:lightline = {
     \ },
 \ }
 
-let g:lightline.colorscheme = 'ayu_mirage'
-
 " let $FZF_DEFAULT_COMMAND = 'fd --type f -I'
 let $FZF_DEFAULT_COMMAND = 'fdfind --type f -I'
 
@@ -200,5 +196,19 @@ endif
 let g:vdebug_features.max_children = 128
 
 " }}}
+
+if exists('+termguicolors')
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    set termguicolors
+endif
+
+" let ayucolor="dark"
+" let g:equinusocio_material_darker = 1
+" let g:equinusocio_material_hide_vertsplit = 1
+" let g:sonokai_style = 'shusia'
+" let g:lightline.colorscheme = 'sonokai'
+let g:lightline.colorscheme = 'spaceduck'
+colorscheme spaceduck
 
 " vim: foldmethod=marker
