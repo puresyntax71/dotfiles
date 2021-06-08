@@ -32,7 +32,12 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-vdebug/vdebug'
 Plug 'wellle/targets.vim'
+" Plug 'nvim-lua/popup.nvim'
+" Plug 'nvim-lua/plenary.nvim'
+" Plug 'nvim-telescope/telescope.nvim'
+" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
+Plug 'folke/tokyonight.nvim', {'branch': 'main'}
 Plug 'croaker/mustang-vim'
 Plug 'joshdick/onedark.vim'
 Plug 'romainl/apprentice'
@@ -51,6 +56,7 @@ Plug 'chuling/vim-equinusocio-material'
 Plug 'humanoid-colors/vim-humanoid-colorscheme'
 Plug 'sainnhe/sonokai'
 Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 call plug#end()
 
@@ -115,6 +121,10 @@ nnoremap ' `
 nnoremap ,A :Ag 
 nnoremap ,F :Files<CR>
 nnoremap ,G :GFiles<CR>
+" nnoremap ,F <cmd>Telescope find_files find_command=fdfind,--type,f,-I<cr>
+" nnoremap ,A <cmd>Telescope live_grep<cr>
+" nnoremap ,B <cmd>Telescope buffers<cr>
+" nnoremap ,H <cmd>Telescope help_tags<cr>
 nnoremap ,ee :drop <C-R>=expand('%:p:h') . '/'<CR>
 nnoremap ,eg :drop $MYGVIMRC<CR>
 nnoremap ,ev :drop $MYVIMRC<CR>
@@ -179,9 +189,12 @@ let g:coc_global_extensions = [
 \ ]
 
 if !exists('g:vdebug_options')
-  let g:vdebug_options = {}
+    let g:vdebug_options = {}
 endif
 
+let g:vdebug_options.port = 9003
+let g:vdebug_options.debug_file = "~/vdebug.log"
+let g:vdebug_options.debug_file_level = "2"
 let g:vdebug_options.path_maps = {
     \  '/app' : getcwd(),
 \ }
@@ -197,18 +210,13 @@ let g:vdebug_features.max_children = 128
 
 " }}}
 
-if exists('+termguicolors')
-    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-    set termguicolors
-endif
-
 " let ayucolor="dark"
 " let g:equinusocio_material_darker = 1
 " let g:equinusocio_material_hide_vertsplit = 1
-" let g:sonokai_style = 'shusia'
-" let g:lightline.colorscheme = 'sonokai'
-let g:lightline.colorscheme = 'spaceduck'
-colorscheme spaceduck
+" let g:sonokai_style = 'andromeda'
+" let g:tokyonight_style = "night"
+let g:lightline.colorscheme = 'dracula'
+" let g:lightline.colorscheme = 'material'
+colorscheme dracula
 
 " vim: foldmethod=marker

@@ -1,6 +1,6 @@
 [user]
 [color]
-  ui = true
+	ui = true
 [merge]
   summary = true
   verbosity = 1
@@ -18,17 +18,17 @@
   renames = copies
   ; compactionHeuristic = true
 [core]
-  fileMode = false
+	filemode = false
   autocrlf = input
   trustctime = false
-  pager = diff-so-fancy | less --tabs=1,5 -R
+	pager = diff-so-fancy | less --tabs=4 -RFX
   untrackedCache = true
 [rerere]
   enabled = true
 [pager]
-  diff = diff-so-fancy | less --tabs=1,5 -R
-  show = diff-so-fancy | less --tabs=1,5 -R
-  log = diff-so-fancy | less --tabs=1,5 -R
+	diff = diff-so-fancy | less --tabs=4 -RFX
+	show = diff-so-fancy | less --tabs=4 -RFX
+	log = diff-so-fancy | less --tabs=4 -RFX
 [rebase]
   autosquash = true
 [init]
@@ -38,3 +38,18 @@
   program = gpg2
 [diff-so-fancy]
 	stripLeadingSymbols = false
+[interactive]
+	diffFilter = diff-so-fancy --patch
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	func = 146 bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
