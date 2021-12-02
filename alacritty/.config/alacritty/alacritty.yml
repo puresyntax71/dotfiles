@@ -149,7 +149,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 12.0
+  size: 14.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -183,91 +183,36 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: true
 
-colors:
-  primary:
-    background: '0x282a36'
-    foreground: '0xf8f8f2'
-  cursor:
-    text: CellBackground
-    cursor: CellForeground
-  vi_mode_cursor:
-    text: CellBackground
-    cursor: CellForeground
-  search:
-    matches:
-      foreground: '0x44475a'
-      background: '0x50fa7b'
-    focused_match:
-      foreground: '0x44475a'
-      background: '0xffb86c'
-    bar:
-      background: '0x282a36'
-      foreground: '0xf8f8f2'
-  line_indicator:
-    foreground: None
-    background: None
-  selection:
-    text: CellForeground
-    background: '0x44475a'
-  normal:
-    black:   '0x000000'
-    red:     '0xff5555'
-    green:   '0x50fa7b'
-    yellow:  '0xf1fa8c'
-    blue:    '0xbd93f9'
-    magenta: '0xff79c6'
-    cyan:    '0x8be9fd'
-    white:   '0xbfbfbf'
-  bright:
-    black:   '0x4d4d4d'
-    red:     '0xff6e67'
-    green:   '0x5af78e'
-    yellow:  '0xf4f99d'
-    blue:    '0xcaa9fa'
-    magenta: '0xff92d0'
-    cyan:    '0x9aedfe'
-    white:   '0xe6e6e6'
-  dim:
-    black:   '0x14151b'
-    red:     '0xff2222'
-    green:   '0x1ef956'
-    yellow:  '0xebf85b'
-    blue:    '0x4d5b86'
-    magenta: '0xff46b0'
-    cyan:    '0x59dffc'
-    white:   '0xe6e6d1'
-# TokyoNight Alacritty Colors
+# Nightfox Alacritty Colors
+# Style: nightfox
 colors:
   # Default colors
   primary:
-    background: '0x1a1b26'
-    foreground: '0xc0caf5'
-
+    background: '0x192330'
+    foreground: '0xcdcecf'
   # Normal colors
   normal:
-    black:   '0x15161E'
-    red:     '0xf7768e'
-    green:   '0x9ece6a'
-    yellow:  '0xe0af68'
-    blue:    '0x7aa2f7'
-    magenta: '0xbb9af7'
-    cyan:    '0x7dcfff'
-    white:   '0xa9b1d6'
-
+    black:   '0x393b44'
+    red:     '0xc94f6d'
+    green:   '0x81b29a'
+    yellow:  '0xdbc074'
+    blue:    '0x719cd6'
+    magenta: '0x9d79d6'
+    cyan:    '0x63cdcf'
+    white:   '0xdfdfe0'
   # Bright colors
   bright:
-    black:   '0x414868'
-    red:     '0xf7768e'
-    green:   '0x9ece6a'
-    yellow:  '0xe0af68'
-    blue:    '0x7aa2f7'
-    magenta: '0xbb9af7'
-    cyan:    '0x7dcfff'
-    white:   '0xc0caf5'
-
+    black:   '0x7f8c98'
+    red:     '0xd6616b'
+    green:   '0x58cd8b'
+    yellow:  '0xffe37e'
+    blue:    '0x84cee4'
+    magenta: '0xb8a1e3'
+    cyan:    '0x59f0ff'
+    white:   '0xf2f2f2'
   indexed_colors:
-    - { index: 16, color: '0xff9e64' }
-    - { index: 17, color: '0xdb4b4b' }
+    - { index: 16, color: '0xf4a261' }
+    - { index: 17, color: '0xd67ad2' }
 
 # Visual Bell
 #

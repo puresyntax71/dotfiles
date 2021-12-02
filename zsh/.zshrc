@@ -60,6 +60,7 @@ cdpath=(
 
 path=(
   $HOME/bin
+  PhpStorm/bin
   /usr/local/opt/gnu-tar/libexec/gnubin
   $HOME/Library/Haskell/bin
   /usr/local/mysql/bin

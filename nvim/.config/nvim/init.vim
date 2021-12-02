@@ -20,6 +20,7 @@ Plug 'justinmk/vim-dirvish'
 Plug 'machakann/vim-sandwich'
 Plug 'mattn/emmet-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'yaegassy/coc-phpstan', {'do': 'yarn install --frozen-lockfile'}
 " Plug 'pangloss/vim-javascript'
 " Plug 'plasticboy/vim-markdown'
 Plug 'posva/vim-vue'
@@ -57,6 +58,8 @@ Plug 'humanoid-colors/vim-humanoid-colorscheme'
 Plug 'sainnhe/sonokai'
 Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'EdenEast/nightfox.nvim'
+Plug 'bluz71/vim-moonfly-colors'
 
 call plug#end()
 
@@ -180,12 +183,13 @@ let g:lightline = {
 \ }
 
 " let $FZF_DEFAULT_COMMAND = 'fd --type f -I'
-let $FZF_DEFAULT_COMMAND = 'fdfind --type f -I'
+let $FZF_DEFAULT_COMMAND = 'fdfind --type f -I -E "*.sql" -E "*.gz"'
 
 let g:vue_pre_processors = 'detect_on_enter'
 
 let g:coc_global_extensions = [
     \ 'coc-phpls',
+    \ 'coc-tsserver'
 \ ]
 
 if !exists('g:vdebug_options')
@@ -210,13 +214,7 @@ let g:vdebug_features.max_children = 128
 
 " }}}
 
-" let ayucolor="dark"
-" let g:equinusocio_material_darker = 1
-" let g:equinusocio_material_hide_vertsplit = 1
-" let g:sonokai_style = 'andromeda'
-" let g:tokyonight_style = "night"
 let g:lightline.colorscheme = 'dracula'
-" let g:lightline.colorscheme = 'material'
 colorscheme dracula
 
 " vim: foldmethod=marker
