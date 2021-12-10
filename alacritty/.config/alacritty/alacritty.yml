@@ -183,36 +183,34 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: true
 
-# Nightfox Alacritty Colors
-# Style: nightfox
 colors:
   # Default colors
   primary:
-    background: '0x192330'
-    foreground: '0xcdcecf'
+    background: '0x232136'
+    foreground: '0xe0def4'
   # Normal colors
   normal:
-    black:   '0x393b44'
-    red:     '0xc94f6d'
-    green:   '0x81b29a'
-    yellow:  '0xdbc074'
-    blue:    '0x719cd6'
-    magenta: '0x9d79d6'
-    cyan:    '0x63cdcf'
-    white:   '0xdfdfe0'
+    black:   '0x393552'
+    red:     '0xeb6f92'
+    green:   '0xa3be8c'
+    yellow:  '0xf6c177'
+    blue:    '0x569FBA'
+    magenta: '0xc4a7e7'
+    cyan:    '0x9ccfd8'
+    white:   '0xe0def4'
   # Bright colors
   bright:
-    black:   '0x7f8c98'
-    red:     '0xd6616b'
-    green:   '0x58cd8b'
-    yellow:  '0xffe37e'
-    blue:    '0x84cee4'
-    magenta: '0xb8a1e3'
-    cyan:    '0x59f0ff'
-    white:   '0xf2f2f2'
+    black:   '0x433C6E'
+    red:     '0xEF7C9D'
+    green:   '0xAECB93'
+    yellow:  '0xF8C886'
+    blue:    '0x5FABC7'
+    magenta: '0xC8AEEB'
+    cyan:    '0xA3D6DF'
+    white:   '0xE1DFF6'
   indexed_colors:
-    - { index: 16, color: '0xf4a261' }
-    - { index: 17, color: '0xd67ad2' }
+    - { index: 16, color: '0xea9a97' }
+    - { index: 17, color: '0xEB98C3' }
 
 # Visual Bell
 #

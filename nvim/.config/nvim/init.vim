@@ -33,6 +33,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-vdebug/vdebug'
 Plug 'wellle/targets.vim'
+Plug 'lukas-reineke/indent-blankline.nvim'
 " Plug 'nvim-lua/popup.nvim'
 " Plug 'nvim-lua/plenary.nvim'
 " Plug 'nvim-telescope/telescope.nvim'
@@ -54,11 +55,11 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'ajh17/Spacegray.vim'
 Plug 'cocopon/iceberg.vim'
 Plug 'chuling/vim-equinusocio-material'
-Plug 'humanoid-colors/vim-humanoid-colorscheme'
+Plug 'humanoid-colors/vim-humanoid-colorscheme', {'branch': 'main'}
 Plug 'sainnhe/sonokai'
 Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
 Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'EdenEast/nightfox.nvim'
+Plug 'EdenEast/nightfox.nvim', {'branch': 'main'}
 Plug 'bluz71/vim-moonfly-colors'
 
 call plug#end()
@@ -214,7 +215,7 @@ let g:vdebug_features.max_children = 128
 
 " }}}
 
-let g:lightline.colorscheme = 'dracula'
-colorscheme dracula
+let g:lightline.colorscheme = 'nightfox'
+colorscheme duskfox
 
 " vim: foldmethod=marker
