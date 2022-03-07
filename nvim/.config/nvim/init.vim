@@ -61,6 +61,7 @@ Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'EdenEast/nightfox.nvim', {'branch': 'main'}
 Plug 'bluz71/vim-moonfly-colors'
+Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 
 call plug#end()
 
@@ -215,7 +216,7 @@ let g:vdebug_features.max_children = 128
 
 " }}}
 
-let g:lightline.colorscheme = 'nightfox'
-colorscheme duskfox
+let g:lightline.colorscheme = 'catppuccin'
+colorscheme catppuccin
 
 " vim: foldmethod=marker

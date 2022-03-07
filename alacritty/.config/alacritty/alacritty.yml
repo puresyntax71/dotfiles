@@ -183,34 +183,43 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: true
 
+# Catppuccin!
 colors:
   # Default colors
   primary:
-    background: '0x232136'
-    foreground: '0xe0def4'
+    background: '0x1E1D2F'
+    foreground: '0xD9E0EE'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '0x1E1D2F'
+    cursor: '0xF5E0DC'
+
   # Normal colors
   normal:
-    black:   '0x393552'
-    red:     '0xeb6f92'
-    green:   '0xa3be8c'
-    yellow:  '0xf6c177'
-    blue:    '0x569FBA'
-    magenta: '0xc4a7e7'
-    cyan:    '0x9ccfd8'
-    white:   '0xe0def4'
+    black:   '0x6E6C7E'
+    red:     '0xF28FAD'
+    green:   '0xABE9B3'
+    yellow:  '0xFAE3B0'
+    blue:    '0x96CDFB'
+    magenta: '0xF5C2E7'
+    cyan:    '0x89DCEB'
+    white:   '0xD9E0EE'
+
   # Bright colors
   bright:
-    black:   '0x433C6E'
-    red:     '0xEF7C9D'
-    green:   '0xAECB93'
-    yellow:  '0xF8C886'
-    blue:    '0x5FABC7'
-    magenta: '0xC8AEEB'
-    cyan:    '0xA3D6DF'
-    white:   '0xE1DFF6'
+    black:   '0x988BA2'
+    red:     '0xF28FAD'
+    green:   '0xABE9B3'
+    yellow:  '0xFAE3B0'
+    blue:    '0x96CDFB'
+    magenta: '0xF5C2E7'
+    cyan:    '0x89DCEB'
+    white:   '0xD9E0EE'
+
   indexed_colors:
-    - { index: 16, color: '0xea9a97' }
-    - { index: 17, color: '0xEB98C3' }
+    - { index: 16, color: '0xF8BD96' }
+    - { index: 17, color: '0xF5E0DC' }
 
 # Visual Bell
 #
