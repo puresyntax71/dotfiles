@@ -5,10 +5,11 @@
 ### Packages
 
 * [`ag`](https://github.com/ggreer/the_silver_searcher)
-* [`fasd`](https://github.com/clvv/fasd)
 * [`fd`](https://github.com/sharkdp/fd)
 * [`nvm`](https://github.com/nvm-sh/nvm)
-* [`zplug`](https://github.com/zplug/zplug)
+* [`zgenom`](https://github.com/jandamm/zgenom)
+* [`tpm`](https://github.com/tmux-plugins/tpm)
+* [`fzf`](https://github.com/junegunn/fzf)
 
 ### NodeJS packages
 
@@ -20,6 +21,7 @@ Set the default for `nvm` using `nvm alias default <version>` e.g. `nvm alias de
 ### Composer packages
 
 * [`drupal/coder`](https://www.drupal.org/project/coder)
+* [`mglaman/drupal-check`](https://github.com/mglaman/drupal-check)
 
 Install `drupal/coder` using [this](https://www.drupal.org/docs/8/modules/code-review-module/installing-coder-sniffer).
 
