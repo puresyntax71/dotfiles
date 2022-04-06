@@ -47,10 +47,10 @@ path=(
 
 if ! zgenom saved; then
   zgenom prezto editor dot-expansion 'yes'
-  zgenom prezto * '*:color' 'yes'
-  zgenom prezto git status:ignore:submodules 'all'
-  zgenom prezto ruby chruby:auto-switch 'yes'
-  zgenom prezto ssh load:identities 'id_rsa'
+  zgenom prezto '*:*' color 'yes'
+  zgenom prezto 'git:status:ignore' submodules 'all'
+  zgenom prezto 'ruby:chruby' auto-switch 'yes'
+  zgenom prezto 'ssh:load' identities 'id_rsa'
 
   zgenom prezto
 
