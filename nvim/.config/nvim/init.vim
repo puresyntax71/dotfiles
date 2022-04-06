@@ -185,7 +185,7 @@ let g:lightline = {
 \ }
 
 " let $FZF_DEFAULT_COMMAND = 'fd --type f -I'
-let $FZF_DEFAULT_COMMAND = 'fdfind --type f -I -E "*.sql" -E "*.gz"'
+let $FZF_DEFAULT_COMMAND = 'fd --type f -I -E "*.sql" -E "*.gz"'
 
 let g:vue_pre_processors = 'detect_on_enter'
 
@@ -203,6 +203,7 @@ let g:vdebug_options.debug_file = "~/vdebug.log"
 let g:vdebug_options.debug_file_level = "2"
 let g:vdebug_options.path_maps = {
     \  '/app' : getcwd(),
+    \  '/var/www/html' : getcwd(),
 \ }
 
 let g:vdebug_options.break_on_open = 0
@@ -216,7 +217,7 @@ let g:vdebug_features.max_children = 128
 
 " }}}
 
-let g:lightline.colorscheme = 'catppuccin'
-colorscheme catppuccin
+let g:lightline.colorscheme = 'dracula'
+colorscheme dracula
 
 " vim: foldmethod=marker
