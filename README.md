@@ -7,9 +7,11 @@
 * [`ag`](https://github.com/ggreer/the_silver_searcher)
 * [`fd`](https://github.com/sharkdp/fd)
 * [`nvm`](https://github.com/nvm-sh/nvm)
-* [`zgenom`](https://github.com/jandamm/zgenom)
 * [`tpm`](https://github.com/tmux-plugins/tpm)
 * [`fzf`](https://github.com/junegunn/fzf)
+* [`zimfw`](https://github.com/zimfw/zimfw)
+* [`asdf`](https://github.com/asdf-vm/asdf)
+* [`delta`](https://github.com/dandavison/delta)
 
 ### NodeJS packages
 
