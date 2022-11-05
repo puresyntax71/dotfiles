@@ -1,71 +1,11 @@
-" Plugins {{{
+lua require('plugins')
 
-call plug#begin(stdpath('data') . '/plugged')
-
-Plug 'sheerun/vim-polyglot'
-Plug 'SirVer/ultisnips'
-Plug 'StanAngeloff/php.vim'
-Plug 'cakebaker/scss-syntax.vim'
-" Plug 'cespare/vim-toml'
-Plug 'editorconfig/editorconfig-vim'
-" Plug 'fatih/vim-go'
-Plug 'itchyny/lightline.vim'
-Plug 'jiangmiao/auto-pairs'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'justinmk/vim-dirvish'
-" Plug 'leafgarland/typescript-vim'
-" Plug 'lepture/vim-jinja'
-" Plug 'lumiliet/vim-twig'
-Plug 'machakann/vim-sandwich'
-Plug 'mattn/emmet-vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'yaegassy/coc-phpstan', {'do': 'yarn install --frozen-lockfile'}
-" Plug 'pangloss/vim-javascript'
-" Plug 'plasticboy/vim-markdown'
-Plug 'posva/vim-vue'
-Plug 'tommcdo/vim-lion'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-unimpaired'
-Plug 'vim-vdebug/vdebug'
-Plug 'wellle/targets.vim'
-Plug 'lukas-reineke/indent-blankline.nvim'
-" Plug 'nvim-lua/popup.nvim'
-" Plug 'nvim-lua/plenary.nvim'
-" Plug 'nvim-telescope/telescope.nvim'
-" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
-Plug 'folke/tokyonight.nvim', {'branch': 'main'}
-Plug 'croaker/mustang-vim'
-Plug 'joshdick/onedark.vim'
-Plug 'romainl/apprentice'
-Plug 'sjl/badwolf'
-Plug 'tomasr/molokai'
-Plug 'vim-scripts/BusyBee'
-Plug 'twerth/ir_black'
-Plug 'nanotech/jellybeans.vim'
-Plug 'erichdongubler/vim-sublime-monokai'
-Plug 'trusktr/seti.vim'
-Plug 'arcticicestudio/nord-vim'
-Plug 'ayu-theme/ayu-vim'
-Plug 'ajh17/Spacegray.vim'
-Plug 'cocopon/iceberg.vim'
-Plug 'chuling/vim-equinusocio-material'
-Plug 'humanoid-colors/vim-humanoid-colorscheme', {'branch': 'main'}
-Plug 'sainnhe/sonokai'
-Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
-Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'EdenEast/nightfox.nvim', {'branch': 'main'}
-Plug 'bluz71/vim-moonfly-colors'
-Plug 'catppuccin/nvim', {'as': 'catppuccin'}
-
-call plug#end()
-
-" }}}
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "all",
+  hightlight = { enable = true },
+}
+EOF
 
 " Settings {{{
 
@@ -80,7 +20,8 @@ set expandtab
 set foldcolumn=0
 set foldenable
 set foldlevel=99
-set foldmethod=syntax
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
 set history=1000
 set ignorecase
 set incsearch
@@ -92,6 +33,7 @@ set mouse=a
 set mousehide
 set number
 set rtp+=~/.fzf/bin/fzf
+set rtp+=/opt/homebrew/bin/fzf
 set scrolloff=5
 set shiftwidth=4
 set showcmd
@@ -107,7 +49,6 @@ set ttimeoutlen=100
 set undofile
 set updatetime=300
 set wildignore+=*.png,*.jpg,*.jpeg,*.gif,*.swp,*.swo
-set wildignore+=*.swp,*.swo
 set wildignore+=.git
 set wildmode=list:longest,full
 set wrap
@@ -126,15 +67,11 @@ nnoremap ' `
 nnoremap ,A :Ag 
 nnoremap ,F :Files<CR>
 nnoremap ,G :GFiles<CR>
-" nnoremap ,F <cmd>Telescope find_files find_command=fdfind,--type,f,-I<cr>
-" nnoremap ,A <cmd>Telescope live_grep<cr>
-" nnoremap ,B <cmd>Telescope buffers<cr>
-" nnoremap ,H <cmd>Telescope help_tags<cr>
 nnoremap ,ee :drop <C-R>=expand('%:p:h') . '/'<CR>
+nnoremap ,sp :sp <C-R>=expand('%:p:h') . '/'<CR>
 nnoremap ,eg :drop $MYGVIMRC<CR>
 nnoremap ,ev :drop $MYVIMRC<CR>
 nnoremap ,fn "=expand("%:t:r:r")<CR>p
-nnoremap ,sp :sp <C-R>=expand('%:p:h') . '/'<CR>
 nnoremap gV `[V`]
 nnoremap j gj
 nnoremap k gk
@@ -142,36 +79,36 @@ nnoremap q: <Nop>
 
 noremap Y y$
 
-inoremap <silent><expr> <c-space> coc#refresh()
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-xmap if <Plug>(coc-funcobj-i)
-xmap af <Plug>(coc-funcobj-a)
-omap if <Plug>(coc-funcobj-i)
-omap af <Plug>(coc-funcobj-a)
+" inoremap <silent><expr> <c-space> coc#refresh()
+" nmap <silent> [g <Plug>(coc-diagnostic-prev)
+" nmap <silent> ]g <Plug>(coc-diagnostic-next)
+" nmap <silent> gd <Plug>(coc-definition)
+" nmap <silent> gy <Plug>(coc-type-definition)
+" nmap <silent> gi <Plug>(coc-implementation)
+" nmap <silent> gr <Plug>(coc-references)
+" xmap if <Plug>(coc-funcobj-i)
+" xmap af <Plug>(coc-funcobj-a)
+" omap if <Plug>(coc-funcobj-i)
+" omap af <Plug>(coc-funcobj-a)
 
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
-nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
-nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
-nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
-nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
-nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
-nnoremap <silent> <space>j  :<C-u>CocNext<CR>
-nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
-nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+" nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+" nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
+" nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
+" nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
+" nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
+" nnoremap <silent> <space>j  :<C-u>CocNext<CR>
+" nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
+" nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
+" function! s:show_documentation()
+"   if (index(['vim','help'], &filetype) >= 0)
+"     execute 'h '.expand('<cword>')
+"   else
+"     call CocAction('doHover')
+"   endif
+" endfunction
 
 " }}}
 
@@ -215,9 +152,38 @@ endif
 
 let g:vdebug_features.max_children = 128
 
+lua <<EOF
+    local cmp = require'cmp'
+
+    cmp.setup {
+        snippet = {
+            expand = function(args)
+                require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+            end,
+        },
+        sources = {
+            { name = 'nvim_lsp' }
+        },
+        mapping = cmp.mapping.preset.insert({
+            ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+            ['<C-f>'] = cmp.mapping.scroll_docs(4),
+            ['<C-Space>'] = cmp.mapping.complete(),
+            ['<C-e>'] = cmp.mapping.abort(),
+            ['<CR>'] = cmp.mapping.confirm({ select = true }),
+        }),
+    }
+
+    local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+    require('lspconfig')['intelephense'].setup {
+        capabilities = capabilities
+    }
+EOF
+
 " }}}
 
-let g:lightline.colorscheme = 'dracula'
-colorscheme dracula
+let g:sonokai_style = 'andromeda'
+let g:sonokai_better_performance = 1
+let g:lightline.colorscheme = 'catppuccin'
+colorscheme catppuccin
 
 " vim: foldmethod=marker

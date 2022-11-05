@@ -2,33 +2,34 @@
 [color]
 	ui = true
 [merge]
-  summary = true
-  verbosity = 1
-  tool = mvimdiff
-  conflictstyle = diff3
+    summary = true
+    verbosity = 1
+    tool = mvimdiff
+    ; conflictstyle = diff3
 [mergetool]
-  prompt = false
+    prompt = false
 [mergetool "mvimdiff"]
-  cmd="mvim -c 'Gdiff' $MERGED"
-  keepbackup=false
+    cmd="mvim -c 'Gdiff' $MERGED"
+    keepbackup=false
 [push]
-  default = simple
+    default = simple
 [diff]
   ; algorithm = patience
-  renames = copies
+    renames = copies
   ; compactionHeuristic = true
 [core]
 	filemode = false
-  autocrlf = input
-  trustctime = false
-	pager = diff-so-fancy | less --tabs=4 -RFX
-  untrackedCache = true
+    autocrlf = input
+    trustctime = false
+    pager = delta
+    untrackedCache = true
+    hooksPath = /Users/arnold/.git/hooks
 [rerere]
 	enabled = false
-[pager]
-	diff = diff-so-fancy | less --tabs=4 -RFX
-	show = diff-so-fancy | less --tabs=4 -RFX
-	log = diff-so-fancy | less --tabs=4 -RFX
+; [pager]
+; 	diff = diff-so-fancy | less --tabs=4 -RFX
+; 	show = diff-so-fancy | less --tabs=4 -RFX
+; 	log = diff-so-fancy | less --tabs=4 -RFX
 [rebase]
   autosquash = true
 [init]
@@ -36,20 +37,9 @@
   gpgsign = false
 [gpg]
   program = gpg2
-[diff-so-fancy]
-	stripLeadingSymbols = false
 [interactive]
-	diffFilter = diff-so-fancy --patch
-[color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
-[color "diff"]
-	meta = 11
-	frag = magenta bold
-	func = 146 bold
-	commit = yellow bold
-	old = red bold
-	new = green bold
-	whitespace = red reverse
+    diffFilter = delta --color-only
+[add.interactive]
+    useBuiltin = false # required for git 2.37.0
+[delta]
+    navigate = true
