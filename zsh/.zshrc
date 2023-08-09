@@ -134,7 +134,6 @@ unset key
 
 path=(
   $HOME/bin
-  $(brew --prefix php@7.4)/bin
   PhpStorm/bin
   /usr/local/opt/gnu-tar/libexec/gnubin
   $HOME/Library/Haskell/bin
