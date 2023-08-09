@@ -30,21 +30,21 @@
             }
           },
           "drupal-check": {
-              "command": "drupal-check",
-              "debounce": 100,
-              "rootPatterns": [ "composer.json", "composer.lock", "vendor", ".git" ],
-              "args": ["--format", "raw", "--no-progress", "%file" ],
-              "offsetLine": 0,
-              "offsetColumn": 0,
-              "sourceName": "drupal-check",
-              "formatLines": 1,
-              "formatPattern": [
-                  "^[^:]+:(\\d+):(.*)(\\r|\\n)*$",
-                  {
-                      "line": 1,
-                      "message": 2,
-                  },
-              ],
+            "command": "drupal-check",
+            "debounce": 100,
+            "rootPatterns": [ "composer.json", "composer.lock", "vendor", ".git" ],
+            "args": ["--format", "raw", "--no-progress", "%file" ],
+            "offsetLine": 0,
+            "offsetColumn": 0,
+            "sourceName": "drupal-check",
+            "formatLines": 1,
+            "formatPattern": [
+                "^[^:]+:(\\d+):(.*)(\\r|\\n)*$",
+                {
+                  "line": 1,
+                  "message": 2
+                }
+            ]
           }
         },
         "filetypes": {
@@ -56,7 +56,11 @@
   "intelephense.files.associations": [
     "*.inc",
     "*.php",
-    "*.module"
+    "*.module",
+    "*.engine"
+  ],
+  "intelephense.files.exclude": [
+    "**/.platform/**"
   ],
   "diagnostic.errorSign": "▬",
   "diagnostic.warningSign": "▪",
