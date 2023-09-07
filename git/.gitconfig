@@ -24,6 +24,8 @@
     pager = delta
     untrackedCache = true
     hooksPath = /Users/arnold/.git/hooks
+	longpaths = true
+	excludesfile = /home/arnold/.gitignore_global
 [rerere]
 	enabled = false
 ; [pager]

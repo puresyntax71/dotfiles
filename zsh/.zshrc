@@ -131,6 +131,8 @@ unset key
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+source /usr/share/doc/fzf/examples/completion.zsh
 
 path=(
   $HOME/bin
