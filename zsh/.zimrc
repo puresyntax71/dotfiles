@@ -23,6 +23,7 @@ zmodule archive
 zmodule ssh
 zmodule asdf
 zmodule fasd
+zmodule custom
 
 #
 # Prompt
