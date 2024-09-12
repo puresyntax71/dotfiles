@@ -26,5 +26,7 @@ Network Trash Folder
 Temporary Items
 .apdisk
 tags
+settings.ddev.php
 
 .phpactor.json
+.ddev/homeadditions

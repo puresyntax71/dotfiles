@@ -1,4 +1,6 @@
 [user]
+	name = Arnold French
+	email = arnold@skvare.com
 [color]
 	ui = true
 [merge]
@@ -23,7 +25,7 @@
     trustctime = false
     pager = delta
     untrackedCache = true
-    hooksPath = /Users/arnold/.git/hooks
+	hooksPath = /home/arnold/.githooks
 	longpaths = true
 	excludesfile = /home/arnold/.gitignore_global
 [rerere]

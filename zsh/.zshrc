@@ -131,8 +131,7 @@ unset key
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-source /usr/share/doc/fzf/examples/key-bindings.zsh
-source /usr/share/doc/fzf/examples/completion.zsh
+source <(fzf --zsh)
 
 path=(
   $HOME/bin
@@ -144,5 +143,6 @@ path=(
   $HOME/.config/composer/vendor/bin
   /usr/local/{bin,sbin}
   $HOME/.cargo/bin
+  /opt/nvim-linux64/bin
   $path
 )
